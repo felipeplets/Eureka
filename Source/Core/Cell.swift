@@ -51,7 +51,7 @@ open class BaseCell : UITableViewCell, BaseCellType {
             if responder! is FormViewController {
                 return responder as? FormViewController
             }
-            responder = responder?.next
+            responder = (responder?.next)!
         }
         return nil
     }
